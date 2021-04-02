@@ -17,9 +17,7 @@ class ViewController: UIViewController {
         
         // Untuk Cek Lokasi File .sql tracking with liya app
         let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-
         let docsDir = dirPaths[0]
-
         print(docsDir)
     }
 
