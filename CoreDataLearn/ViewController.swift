@@ -10,7 +10,7 @@ import CoreData
 
 class ViewController: UIViewController {
     
-    var people: [NSManagedObject] = []
+    var people: [User] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +22,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onePressed(_ sender: Any) {
-        saveUser(name: "Bambang", extraPoint: 20)
+        saveUser(name: "OkiDoki", extraPoint: 85000)
     }
     
     @IBAction func twoPressed(_ sender: Any) {
-        fetchAllUsers()
+        let user = CoreDataManager.shared.fetchAllUsers()
+        if let user = user {
+            people = user
+        }
     }
     
     @IBAction func threePressed(_ sender: Any) {
@@ -40,92 +43,29 @@ class ViewController: UIViewController {
         if people.count == 0 {
             print("Klik fetch dulu")
         }
-        updateOneUsers(user: people[1] as! User)
+        updateOneUser(user: people[1])
     }
     
     @IBAction func fivePressed(_ sender: Any) {
         if people.count == 0 {
             print("Klik fetch dulu")
         }
-        deleteUser(user: people[0] as! User)
+        deleteUser(user: people[0])
     }
     
     func saveUser(name: String, extraPoint: Int) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        guard let userEntity = NSEntityDescription.entity(forEntityName: "User", in: managedContext), let challengeEntity = NSEntityDescription.entity(forEntityName: "Challenge", in: managedContext)  else {
-            return
-        }
-        
-        let user = NSManagedObject(entity: userEntity, insertInto: managedContext)
-        let challenge = NSManagedObject(entity: challengeEntity, insertInto: managedContext)
-        
-        user.setValue(name, forKey: "name")
-        user.setValue(extraPoint, forKey: "points")
-        challenge.setValue("1", forKey: "challengeId")
-        challenge.setValue("yuk bisa yuk", forKey: "desc")
-        challenge.setValue(user, forKey: "user")
-        
-        do {
-            try managedContext.save()
-        } catch {
-            fatalError()
+        let user = CoreDataManager.shared.saveUser(name: name, extraPoint: extraPoint)
+        if user != nil {
+            people.append(user!)
         }
     }
     
-    func fetchAllUsers() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "User")
-        
-        do {
-            people = try managedContext.fetch(fetchRequest)
-        } catch let error {
-            print("could not fetch \(error.localizedDescription)")
-        }
-    }
-    
-    func updateOneUsers(user: User) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        do {
-            user.setValue("Jono", forKey: "name")
-            user.setValue(100, forKey: "points")
-            
-            do {
-                try managedContext.save()
-            } catch let error {
-                print(error.localizedDescription)
-            }
-        }
+    func updateOneUser(user: User) {
+        CoreDataManager.shared.updateOneUsers(user: user)
     }
     
     func deleteUser(user: User) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        do {
-            managedContext.delete(user)
-        }
-        
-        do {
-            try managedContext.save()
-        } catch {
-            print("error to delete")
-        }
-        
+        CoreDataManager.shared.deleteUser(user: user)
     }
 }
 
