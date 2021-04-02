@@ -14,6 +14,14 @@
 		61924E342617021500240BC6 /* CoreDataLearn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61924E322617021500240BC6 /* CoreDataLearn.xcdatamodeld */; };
 		61924E362617021500240BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61924E352617021500240BC6 /* Assets.xcassets */; };
 		61924E392617021500240BC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61924E372617021500240BC6 /* LaunchScreen.storyboard */; };
+		61924E7326171D3B00240BC6 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61924E6B26171D3B00240BC6 /* User+CoreDataClass.swift */; };
+		61924E7426171D3B00240BC6 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61924E6C26171D3B00240BC6 /* User+CoreDataProperties.swift */; };
+		61924E7526171D3B00240BC6 /* How+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61924E6D26171D3B00240BC6 /* How+CoreDataClass.swift */; };
+		61924E7626171D3B00240BC6 /* How+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61924E6E26171D3B00240BC6 /* How+CoreDataProperties.swift */; };
+		61924E7726171D3B00240BC6 /* Status+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61924E6F26171D3B00240BC6 /* Status+CoreDataClass.swift */; };
+		61924E7826171D3B00240BC6 /* Status+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61924E7026171D3B00240BC6 /* Status+CoreDataProperties.swift */; };
+		61924E7926171D3B00240BC6 /* Challenge+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61924E7126171D3B00240BC6 /* Challenge+CoreDataClass.swift */; };
+		61924E7A26171D3B00240BC6 /* Challenge+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61924E7226171D3B00240BC6 /* Challenge+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,14 @@
 		61924E352617021500240BC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61924E382617021500240BC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61924E3A2617021500240BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61924E6B26171D3B00240BC6 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "CoreDataLearn/CoreData/User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		61924E6C26171D3B00240BC6 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "CoreDataLearn/CoreData/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		61924E6D26171D3B00240BC6 /* How+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "How+CoreDataClass.swift"; path = "CoreDataLearn/CoreData/How+CoreDataClass.swift"; sourceTree = "<group>"; };
+		61924E6E26171D3B00240BC6 /* How+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "How+CoreDataProperties.swift"; path = "CoreDataLearn/CoreData/How+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		61924E6F26171D3B00240BC6 /* Status+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Status+CoreDataClass.swift"; path = "CoreDataLearn/CoreData/Status+CoreDataClass.swift"; sourceTree = "<group>"; };
+		61924E7026171D3B00240BC6 /* Status+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Status+CoreDataProperties.swift"; path = "CoreDataLearn/CoreData/Status+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		61924E7126171D3B00240BC6 /* Challenge+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Challenge+CoreDataClass.swift"; path = "CoreDataLearn/CoreData/Challenge+CoreDataClass.swift"; sourceTree = "<group>"; };
+		61924E7226171D3B00240BC6 /* Challenge+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Challenge+CoreDataProperties.swift"; path = "CoreDataLearn/CoreData/Challenge+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +58,14 @@
 		61924E1D2617021500240BC6 = {
 			isa = PBXGroup;
 			children = (
+				61924E6B26171D3B00240BC6 /* User+CoreDataClass.swift */,
+				61924E6C26171D3B00240BC6 /* User+CoreDataProperties.swift */,
+				61924E6D26171D3B00240BC6 /* How+CoreDataClass.swift */,
+				61924E6E26171D3B00240BC6 /* How+CoreDataProperties.swift */,
+				61924E6F26171D3B00240BC6 /* Status+CoreDataClass.swift */,
+				61924E7026171D3B00240BC6 /* Status+CoreDataProperties.swift */,
+				61924E7126171D3B00240BC6 /* Challenge+CoreDataClass.swift */,
+				61924E7226171D3B00240BC6 /* Challenge+CoreDataProperties.swift */,
 				61924E282617021500240BC6 /* CoreDataLearn */,
 				61924E272617021500240BC6 /* Products */,
 			);
@@ -140,10 +164,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61924E7626171D3B00240BC6 /* How+CoreDataProperties.swift in Sources */,
 				61924E2E2617021500240BC6 /* ViewController.swift in Sources */,
+				61924E7526171D3B00240BC6 /* How+CoreDataClass.swift in Sources */,
 				61924E2A2617021500240BC6 /* AppDelegate.swift in Sources */,
+				61924E7426171D3B00240BC6 /* User+CoreDataProperties.swift in Sources */,
+				61924E7826171D3B00240BC6 /* Status+CoreDataProperties.swift in Sources */,
 				61924E2C2617021500240BC6 /* SceneDelegate.swift in Sources */,
+				61924E7926171D3B00240BC6 /* Challenge+CoreDataClass.swift in Sources */,
 				61924E342617021500240BC6 /* CoreDataLearn.xcdatamodeld in Sources */,
+				61924E7726171D3B00240BC6 /* Status+CoreDataClass.swift in Sources */,
+				61924E7326171D3B00240BC6 /* User+CoreDataClass.swift in Sources */,
+				61924E7A26171D3B00240BC6 /* Challenge+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
